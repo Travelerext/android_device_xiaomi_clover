@@ -23,8 +23,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl:64 \
     android.hardware.boot@1.0-impl.recovery \
     android.hardware.boot@1.0-service \
-    bootctrl.sdm660 \
-    bootctrl.sdm660.recovery
 
 PRODUCT_PACKAGES += \
     update_engine \
