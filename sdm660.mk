@@ -138,6 +138,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 endif
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.sdm660 \
