@@ -789,6 +789,9 @@
         provisioning, availability etc -->
    <bool name="config_carrier_wfc_ims_available">true</bool>
 
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
@@ -991,8 +994,62 @@
          to have a confirmed way to dismiss the keyboard when desired. -->
     <bool name="config_automotiveHideNavBarForKeyboard">true</bool>
 
-    <!-- Configuration to enable non-default PDP during IWLAN -->
-    <bool name="config_feature_iwlan_enabled">true</bool>
+    <!-- The list of components which should be automatically disabled for a specific device. -->
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
+        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+    </string-array>
+
+    <!-- True if camera app should be pinned via Pinner Service -->
+    <bool name="config_pinnerCameraApp">true</bool>
+
+    <!-- Should the pinner service pin the Home application? -->
+    <bool name="config_pinnerHomeApp">true</bool>
+
+    <!-- Indicate whether closing the lid causes the device to go to sleep and opening
+         it causes the device to wake up.
+         The default is false. -->
+    <bool name="config_lidControlsSleep">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
+    <!-- Whether camera shutter sound is forced or not  (country specific). -->
+    <bool name="config_camera_sound_forced">false</bool>
+
+    <!-- Is the device capable of supporting digital pen
+    <bool name="config_digitalPenCapable">true</bool> -->
+
+    <!-- Flag specifying whether VoLTE, VT and WFC is available on device -->
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
+
+    <!-- Flag specifying whether VoLTE & VT should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_volte_available">true</bool>
+
+    <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_wfc_ims_available">true</bool>
+
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
+     empty string is passed in -->
+    <string translatable="false" name="config_wlan_data_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
+     empty string is passed in -->
+    <string translatable="false" name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string translatable="false" name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
 
     <!-- Specify custom blanking delay of the display -->
     <integer name="config_screen_off_delay">0</integer>
