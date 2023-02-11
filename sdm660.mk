@@ -320,9 +320,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(COMMON_PATH)/overlay
-
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     DialerOverlay \
@@ -332,8 +329,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlay \
     TelephonyOverlay
 
-# RRO configuration
-TARGET_USES_RRO := true
+PRODUCT_ENFORCE_RRO_TARGETS := *
     
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -478,6 +474,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/sdm660-common/sdm660-common-vendor.mk)
