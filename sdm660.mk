@@ -325,7 +325,7 @@ PRODUCT_PACKAGES += \
     DialerOverlay \
     FrameworksOverlay \
     SettingsOverlay \
-    SettingsProviderOverlay \
+    SettingsProviderOverlayClover \
     SystemUIOverlay \
     TelephonyOverlay
 
