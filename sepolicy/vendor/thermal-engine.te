@@ -1,3 +1,6 @@
+r_dir_file(thermal-engine, sysfs_thermal)
+
+allow thermal-engine sysfs:file r_file_perms;
 allow thermal-engine thermal_data_file:dir rw_dir_perms;
 allow thermal-engine thermal_data_file:file create_file_perms;
 allow thermal-engine sysfs:dir r_dir_perms;
