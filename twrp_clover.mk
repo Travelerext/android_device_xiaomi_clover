@@ -15,7 +15,7 @@
 #
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
+$(call inherit-product, device/xiaomi/clover/device.mk)
 
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -28,11 +28,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := jasmine_sprout
+PRODUCT_RELEASE_NAME := clover
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := twrp_jasmine_sprout
-PRODUCT_DEVICE := jasmine_sprout
+PRODUCT_NAME := twrp_clover
+PRODUCT_DEVICE := clover
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2

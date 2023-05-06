@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_jasmine_sprout.mk
+    $(LOCAL_DIR)/twrp_clover.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_jasmine_sprout-eng
+    twrp_clover-eng

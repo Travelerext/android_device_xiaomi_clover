@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/jasmine_sprout
+DEVICE_PATH := device/xiaomi/clover
 
 # A/B
 AB_OTA_UPDATER := true
@@ -135,7 +135,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
 
 # TWRP Configuration
-TW_DEVICE_VERSION := jasmine by xiaoleGun 1205
+TW_DEVICE_VERSION :=Retrofit dynamic spec by Traveler
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
